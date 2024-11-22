@@ -24,9 +24,9 @@ def demo_sneaky_roman_numerals():
     demo_cases = [
         ('', 0),
         ('MCXIII', 1113),
-        ('MCLXVIII',1168),
-        ('MMDCCLXXVIII',2778),
-        ('MMMMMMMMMM',10000),
+        ('MCLXVIII', 1168),
+        ('MMDCCLXXVIII', 2778),
+        ('MMMMMMMMMM', 10000),
         ('IX', 9),
         ('XCIX', 99),
         ('CMXC', 990),
@@ -40,7 +40,14 @@ def demo_sneaky_roman_numerals():
         ('CDXLIV', 444)
     ]
     for demo_case in demo_cases:
-        print('For input {0}: Expected {1} and got {2}'.format(demo_case[0], str(demo_case[1]), str(sneaky_roman_numerals(demo_case[0]))))
+        print(
+                'For input {0}: Expected {1} and got {2}'.format(
+                        demo_case[0],
+                        str(demo_case[1]),
+                        str(sneaky_roman_numerals(demo_case[0]))
+                )
+            )
+
 
 if __name__ == '__main__':
     demo_sneaky_roman_numerals()

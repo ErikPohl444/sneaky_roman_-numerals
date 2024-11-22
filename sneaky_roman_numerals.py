@@ -30,27 +30,26 @@ def sneaky_roman_numerals(roman):
         'I': 3
     }
     
-    subtractive_phrases_and_factors = [('IV',4), 
-                                       ('IX',9), 
-                                       ('XL',4),
-                                       ('XC',9), 
-                                       ('CD',4), 
-                                       ('CM',9)
+    subtractive_phrases_and_factors = [('IV', 4),
+                                       ('IX', 9),
+                                       ('XL', 4),
+                                       ('XC', 9),
+                                       ('CD', 4),
+                                       ('CM', 9)
                                        ]
 
-    
     five_times_replace_numerals = [
         ('D', 'C'),
         ('V', 'I'),
         ('L', 'X')
     ]
     
-    arabic = ['0','0','0','0']
+    arabic = ['0', '0', '0', '0']
     
-    #roman = roman.upper()  # assumes uppercase
+    # roman = roman.upper()  # assumes uppercase
     
     if set(roman).difference({'I', 'V', 'X', 'L', 'C', 'D', 'M'}):
-        raise ValueError;
+        raise ValueError
     
     '''
     first, replace any subtractive phrase by its first letter.  
@@ -78,7 +77,7 @@ def sneaky_roman_numerals(roman):
     so the number is 0003
     '''
     roman_numeral_groups = groupby(roman)
-    for index,roman_numeral_group in roman_numeral_groups:
+    for index, roman_numeral_group in roman_numeral_groups:
         arabic[base_ten_arabic_digit_places[index]] = str(len(list(roman_numeral_group)))
     return int(''.join(arabic))
         

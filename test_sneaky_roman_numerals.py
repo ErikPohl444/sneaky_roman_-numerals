@@ -18,16 +18,16 @@ __status__ = "Code Review"
 
 
 @pytest.mark.parametrize("roman_input,expected_arabic", [
-## null case
+    # null case
     ('', 0),
-## simple case
+    # simple case
     ('MCXIII', 1113),
-## additive cases
-    ('MCLXVIII',1168),
-    ('MMDCCLXXVIII',2778),
-## longer than four digits in Arabic
-    ('MMMMMMMMMM',10000),
-## subtractive cases
+    # additive cases
+    ('MCLXVIII', 1168),
+    ('MMDCCLXXVIII', 2778),
+    # longer than four digits in Arabic
+    ('MMMMMMMMMM', 10000),
+    # subtractive cases
     ('IX', 9),
     ('XCIX', 99),
     ('CMXC', 990),
@@ -41,16 +41,17 @@ __status__ = "Code Review"
     ('CDXLIV', 444)
 ])
 def test_roman_to_arabic(roman_input, expected_arabic):
-    assert sneaky_roman_numerals.sneaky_roman_numerals(roman_input) == expected_arabic
+    assert sneaky_roman_numerals(roman_input) == expected_arabic
+
 
 def test_roman_to_arabic_invalid_input():
     try:
-        assert sneaky_roman_numerals.sneaky_roman_numerals('ZIII') == 10
+        assert sneaky_roman_numerals('ZIII') == 10
         raise AssertionError
     except ValueError:
         print("Expected error")
     try:
-        assert sneaky_roman_numerals.sneaky_roman_numerals('iii') == 3
+        assert sneaky_roman_numerals('iii') == 3
         raise AssertionError
     except ValueError:
         print("Expected error")
