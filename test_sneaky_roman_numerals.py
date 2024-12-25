@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-'''
+"""
 Regression test cases for sneaky roman numerals
-'''
+"""
 
 import pytest
 from sneaky_roman_numerals import sneaky_roman_numerals

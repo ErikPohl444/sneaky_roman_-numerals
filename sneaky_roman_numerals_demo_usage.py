@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-'''
+"""
 Demo use cases for sneaky roman numerals
-'''
+"""
 
 from sneaky_roman_numerals import sneaky_roman_numerals
 
@@ -17,10 +17,10 @@ __status__ = "Code Review"
 
 
 def demo_sneaky_roman_numerals():
-    '''
+    """
     Execute a number of edge and regression cases
     with output
-    '''
+    """
     demo_cases = [
         ('', 0),
         ('MCXIII', 1113),

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-'''
+"""
 Provides a function to convert roman numerals to arabic
 without integer math
-'''
+"""
 
 from itertools import groupby
 
@@ -18,10 +18,10 @@ __status__ = "Code Review"
 
 
 def sneaky_roman_numerals(roman):
-    '''
+    """
     translates roman numerals to arabic
     without using handy integer math
-    '''
+    """
     
     base_ten_arabic_digit_places = {
         'M': 0,
